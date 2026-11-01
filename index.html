@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+</head>
+<body>
+
+  <!--Task 0: Setup-->
+
+  <nav class="navbar navbar-expand-lg navbar-purple">
+    <div class="container">
+      <span class="navbar-brand text-white fw-bold">Moldir's Portfolio</span>
+      <button id="themeToggleBtn" class="btn btn-outline-light btn-sm">Dark Mode</button>
+    </div>
+  </nav>
+
+  <div class="container py-4">
+
+    <!--Task 1: Selectors & CSS-->
+    <section id="profileSection" class="card p-4 mb-4">
+      <h1 class="section-title">Welcome to My Portfolio</h1>
+      <h3 class="my-name">Moldir Jarmukhambetova</h3>
+      <p class="headline">Front-End Developer &amp; Creative Thinker</p>
+      <p class="intro">I build clean, interactive web experiences with HTML, CSS, and jQuery.</p>
+      <button id="updateGreetingBtn" class="btn btn-purple me-2 mb-4">Update Greeting</button>
+    </section>
+
+    <!--Task 2: Visibility Methods-->
+    <section id="aboutSection" class="card p-4 mb-4">
+      <h2 class="section-title">About Me</h2>
+      <p>I'm a student learning web development and I enjoy turning ideas into working interfaces.</p>
+      <p id="statusMsg" class="status-text">Currently learning jQuery!</p>
+      <ul id="funFacts" class="fun-facts">
+        <li>I love playing online games.</li>
+        <li>My favorite color is purple.</li>
+        <li>I want to build my own app someday.</li>
+      </ul>
+      <button id="hideBtn" class="btn btn-purple me-2">Hide</button>
+      <button id="showBtn" class="btn btn-purple me-2">Show</button>
+      <button id="toggleBtn" class="btn btn-outline-purple">Toggle</button>
+    </section>
+
+    <!--Task 3: Fade Methods-->
+    <section id="gallerySection" class="card p-4 mb-4">
+      <h2 class="section-title">Gallery</h2>
+      <div class="row g-3 mb-3">
+        <div class="col-md-4"><img src="images/myFavoriteGift.jpg" class="gallery-img" alt="Profile"></div>
+        <div class="col-md-4"><img src="images/myFavoritePhoto.jpg" class="gallery-img" alt="Hobby"></div>
+        <div class="col-md-4"><img src="images/mySchool.jpg" class="gallery-img" alt="Travel"></div>
+      </div>
+      <button id="fadeInBtn" class="btn btn-purple me-2">Fade In</button>
+      <button id="fadeOutBtn" class="btn btn-purple me-2">Fade Out</button>
+      <button id="fadeToggleBtn" class="btn btn-outline-purple">Fade Toggle</button>
+    </section>
+
+    <!--Task 4: Slide Methods-->
+    <section id="slideSection" class="card p-4 mb-4">
+      <h2 class="section-title">My Favorites</h2>
+      <div class="slide-heading" data-target="musicPanel">My Favorite Music</div>
+      <div id="musicPanel" class="slide-panel">J-pop or any catchy music in general.</div>
+
+      <div class="slide-heading" data-target="moviePanel">My Favorite TV Series</div>
+      <div id="moviePanel" class="slide-panel">Percy Jackson and the Olympians.</div>
+
+      <div class="slide-heading" data-target="subjectPanel">My Favorite Subject</div>
+      <div id="subjectPanel" class="slide-panel">Web Technologies, of course!</div>
+    </section>
+
+    <!--Task 5: Add & Remove Elements-->
+    <section id="skillsSection" class="card p-4 mb-4">
+      <h2 class="section-title">My Skills</h2>
+      <ul id="skillList" class="list-group mb-3">
+        <li class="list-group-item">HTML</li>
+        <li class="list-group-item">CSS</li>
+        <li class="list-group-item">JavaScript</li>
+        <li class="list-group-item">jQuery</li>
+      </ul>
+      <div class="input-group">
+        <input type="text" id="skillInput" class="form-control" placeholder="Enter a new skill">
+        <button id="addSkillBtn" class="btn btn-purple">Add Skill</button>
+        <button id="prependSkillBtn" class="btn btn-outline-purple">Prepend Skill</button>
+        <button id="removeSkillBtn" class="btn btn-outline-danger">Remove Skill</button>
+      </div>
+    </section>
+
+    <!--Task 8: Basic Animation-->
+    <section id="animateSection" class="card p-4 mb-4">
+      <h2 class="section-title">Animate My Skills</h2>
+      <div class="skill-row">
+        <span class="skill-name">HTML</span>
+        <div class="skill-track"><div class="skill-fill" data-width="90%"></div></div>
+      </div>
+      <div class="skill-row">
+        <span class="skill-name">CSS</span>
+        <div class="skill-track"><div class="skill-fill" data-width="80%"></div></div>
+      </div>
+      <div class="skill-row">
+        <span class="skill-name">JavaScript</span>
+        <div class="skill-track"><div class="skill-fill" data-width="70%"></div></div>
+      </div>
+      <button id="animateBtn" class="btn btn-purple mt-2">Animate My Skills</button>
+    </section>
+
+    <!--Task 6: Modifying Attributes-->
+    <section id="socialSection" class="card p-4 mb-4">
+      <h2 class="section-title">Connect With Me</h2>
+      <a href="https://github.com/jarmumoldir-png" id="socialLink" target="_blank" class="btn btn-purple">GitHub</a>
+      <button id="changeLinkBtn" class="btn btn-outline-purple ms-2">Change Link</button>
+    </section>
+
+    <!--Task 7: Form Interaction-->
+    <section id="formSection" class="card p-4 mb-4">
+      <h2 class="section-title">Contact Me</h2>
+      <div class="mb-2">
+        <input type="text" id="nameInput" class="form-control" placeholder="Your name">
+      </div>
+      <div class="mb-2">
+        <input type="email" id="emailInput" class="form-control" placeholder="Your email">
+      </div>
+      <p id="livePreview" class="live-preview">Start typing above...</p>
+    </section>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
